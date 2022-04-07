@@ -17,5 +17,5 @@ jobs:
       run: |
         docker pull lsstdesc/td-env:dev
         cd $GITHUB_WORKSPACE
-        docker run -u lsst -v $GITHUB_WORKSPACE:$GITHUB_WORKSPACE -w /opt/lsst/software/stack lsstdesc/td-env:dev /bin/bash /docker/td-env-test.sh
+        docker run -u lsst -v $GITHUB_WORKSPACE:$GITHUB_WORKSPACE -w $GITHUB_WORKSPACE lsstdesc/td-env:dev /bin/bash docker/td-env-test.sh
          
